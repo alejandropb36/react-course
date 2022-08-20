@@ -2,5 +2,16 @@ import React from 'react';
 import ReactDom from 'react-dom/client';
 
 const root = ReactDom.createRoot(document.getElementById('root'));
-root.render(<h1>Hello world!</h1>);
+
+function Greeting() {
+    return <div>
+        <h1>Esto es un componente</h1>
+        <p>Lorem 123</p>
+    </div>;
+}
+
+root.render(<div>
+    <Greeting></Greeting>
+    <Greeting/>
+</div>);
 
