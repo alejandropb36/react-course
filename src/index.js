@@ -12,7 +12,8 @@ function Greeting() {
   const band = true;
 
   return (
-    <div>
+    <>
+      <p>------------------------------------------------------</p>
       <h1>
         {user.firstName} {user.lastName}
       </h1>
@@ -20,8 +21,14 @@ function Greeting() {
       <h3>Object: {JSON.stringify(user)}</h3>
 
       <p>Active: {band.toString()}</p>
-    </div>
+    </> // This is React Fragment
   );
 }
 
-root.render(<Greeting />);
+root.render(
+  <>
+    <Greeting />
+    <Greeting />
+    <Greeting />
+  </>
+);
