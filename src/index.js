@@ -4,15 +4,24 @@ import ReactDom from "react-dom/client";
 const root = ReactDom.createRoot(document.getElementById("root"));
 
 function Greeting() {
-  const married = true;
+  const user = {
+    firstName: "Alejandro",
+    lastName: "Ponce",
+    id: 2123131231,
+  };
+  const band = true;
 
-  return <h1>{married ? "Estoy casado! 😀" : "No estoy casado!"}</h1>;
+  return (
+    <div>
+      <h1>
+        {user.firstName} {user.lastName}
+      </h1>
+      <h2>Id: {user.id}</h2>
+      <h3>Object: {JSON.stringify(user)}</h3>
 
-  if (married) {
-    return <h1>Estoy casado!</h1>;
-  } else {
-    return <h1>No estoy casado!</h1>;
-  }
+      <p>Active: {band.toString()}</p>
+    </div>
+  );
 }
 
 root.render(<Greeting />);
