@@ -1,11 +1,15 @@
 import { UserCard, UserCard2 } from "./UserCard";
 import Product, { NavBar } from "./Product";
 import { Card } from "./Card";
+import { Button } from './Button';
 
 export function App() {
   return (
     <>
-      <Card
+      <Button text="Click me" />
+      <Button text="Enviar"/>
+      <Button text="Hola" name="Joe"/>
+      {/* <Card
         name="Ryan Ray"
         amount={100}
         married={true}
@@ -22,7 +26,7 @@ export function App() {
       <UserCard username={true} />
       <UserCard username={[1, 2, 3]} />
       <UserCard2 username={"user card 2 with title prop"} password="password" />
-      <UserCard2 username={"user card 2 with title prop"} />
+      <UserCard2 username={"user card 2 with title prop"} /> */}
     </> // This is React Fragment
   );
 }
