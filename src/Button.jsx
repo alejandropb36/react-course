@@ -6,7 +6,9 @@ export function Button({text, name}) {
     }
     console.log(text);
     return (
-        <button>
+        <button onClick={ function () {
+            console.log("Diste click en el boton mi prro!")
+        } }>
             {text} - {name}
         </button>
     );
