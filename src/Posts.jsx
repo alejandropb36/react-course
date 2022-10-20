@@ -1,3 +1,5 @@
+import { VscBug } from 'react-icons/vsc';
+
 export function Posts() {
     return (
         <>
@@ -7,7 +9,7 @@ export function Posts() {
                     .then(data => console.log(data))
                     .catch(error => console.error(error))
             }}>
-                Taer datos
+                <VscBug/> Taer datos
             </button>
 
 
