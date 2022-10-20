@@ -1,6 +1,7 @@
 import { TaskCard } from "./Task";
 import { Saludar } from "./Saludar";
 import { Button } from "./Button";
+import { Posts } from "./Posts";
 
 
 const handleChange = (e) => console.log(e.target.value);
@@ -29,6 +30,10 @@ export function App() {
         <br />
         <button>Enviar</button>
       </form>
+
+
+      <hr />
+      <Posts/>
     </> // This is React Fragment
   );
 }
