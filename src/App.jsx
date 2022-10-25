@@ -6,6 +6,37 @@ import { Posts } from "./Posts";
 
 const handleChange = (e) => console.log(e.target.value);
 
+const users = [
+  {
+    id: 1,
+    name: 'Alejandro',
+    lastname: 'Ponce',
+    age: 27,
+    image: 'https://robohash.org/user1'
+  },
+  {
+    id: 2,
+    name: 'Karla',
+    lastname: 'Rodriguez',
+    age: 20,
+    image: 'https://robohash.org/user2'
+  },
+  {
+    id: 3,
+    name: 'Muneca',
+    lastname: 'Ponce',
+    age: 24,
+    image: 'https://robohash.org/user3'
+  },
+  {
+    id: 4,
+    name: 'Pepe',
+    lastname: 'Chuy',
+    age: 19,
+    image: 'https://robohash.org/user4'
+  },
+];
+
 export function App() {
   return (
     <>
@@ -34,6 +65,18 @@ export function App() {
 
       <hr />
       <Posts/>
+
+
+      <hr />
+      <h1>Users: </h1>
+
+      {users.map(user => (
+          <div key={user.id}>
+            <h2 key={user.id}>{user.name} {user.lastname}</h2>
+            <img src={user.image} alt={user.name} />
+          </div>
+      ))}
+
     </> // This is React Fragment
   );
 }
