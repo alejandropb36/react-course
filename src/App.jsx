@@ -2,40 +2,11 @@ import { TaskCard } from "./Task";
 import { Saludar } from "./Saludar";
 import { Button } from "./Button";
 import { Posts } from "./Posts";
+import { Counter } from "./Counter";
+import { Form } from "./From";
 
 
 const handleChange = (e) => console.log(e.target.value);
-
-const users = [
-  {
-    id: 1,
-    name: 'Alejandro',
-    lastname: 'Ponce',
-    age: 27,
-    image: 'https://robohash.org/user1'
-  },
-  {
-    id: 2,
-    name: 'Karla',
-    lastname: 'Rodriguez',
-    age: 20,
-    image: 'https://robohash.org/user2'
-  },
-  {
-    id: 3,
-    name: 'Muneca',
-    lastname: 'Ponce',
-    age: 24,
-    image: 'https://robohash.org/user3'
-  },
-  {
-    id: 4,
-    name: 'Pepe',
-    lastname: 'Chuy',
-    age: 19,
-    image: 'https://robohash.org/user4'
-  },
-];
 
 export function App() {
   return (
@@ -68,14 +39,10 @@ export function App() {
 
 
       <hr />
-      <h1>Users: </h1>
+      <Counter/>
 
-      {users.map(user => (
-          <div key={user.id}>
-            <h2 key={user.id}>{user.name} {user.lastname}</h2>
-            <img src={user.image} alt={user.name} />
-          </div>
-      ))}
+      <hr />
+      <Form/>
 
     </> // This is React Fragment
   );
